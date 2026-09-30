@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle</title>
+  <link rel="stylesheet" href="../CSS/wordle.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="spacer">
+        <div class="stat-chip" id="lenChip" title="Word length">5</div>
+      </div>
+      <h1 class="title">Wordle</h1>
+      <div class="top-right">
+        <div class="stat-chip" id="streakChip" title="Streak">0</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="board-wrap">
+        <div class="board" id="board" aria-label="Wordle board"></div>
+        <div class="toast hidden" id="toast"></div>
+      </div>
+
+      <div class="keyboard" id="keyboard" aria-label="Keyboard"></div>
+
+      <div class="help-line">
+        <span>Type letters</span>
+        <span class="dot">·</span>
+        <span><kbd>Enter</kbd> submit</span>
+        <span class="dot">·</span>
+        <span><kbd>Backspace</kbd> delete</span>
+        <span class="dot">·</span>
+        <span><kbd>↑</kbd> keys / menu · <kbd>↓</kbd> board</span>
+      </div>
+    </main>
+
+    <div class="modal-layer hidden" id="modalLayer">
+      <div class="modal">
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="menu-list" id="menuList"></div>
+        <div class="modal-hint">Arrows to move · Enter to choose</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/wordle.js"></script>
+</body>
+</html>

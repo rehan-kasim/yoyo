@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sudoku</title>
+  <link rel="stylesheet" href="../CSS/sudoku.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">SUDOKU</div>
+      <div class="top-status" id="topStatus">classic · 9x9</div>
+      <div class="top-actions">
+        <button class="btn" id="btnMenu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="scorebar">
+        <div class="chip">time <b id="timeEl">00:00</b></div>
+        <div class="mid">
+          <div class="turn" id="diffLine">normal</div>
+          <div class="sub" id="subLine">0 mistakes</div>
+        </div>
+        <div class="chip">empty <b id="leftEl">41</b></div>
+      </div>
+
+      <div class="field-wrap">
+        <div class="board" id="board"></div>
+      </div>
+
+      <div class="pad">
+        <div class="digits" id="digits"></div>
+        <div class="actions">
+          <button class="pbtn" id="btnErase" type="button">erase</button>
+          <button class="pbtn" id="btnNotes" type="button">notes off</button>
+          <button class="pbtn" id="btnUndo" type="button">undo</button>
+          <button class="pbtn" id="btnHint" type="button">hint</button>
+        </div>
+      </div>
+
+      <div class="hints">
+        <span><kbd>&larr;&uarr;&rarr;&darr;</kbd> / <kbd>wasd</kbd> move</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>1-9</kbd> place</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>n</kbd> notes</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>bksp</kbd> erase</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>esc</kbd> menu</span>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="ov-card">
+      <div class="ov-title" id="ovTitle"></div>
+      <div class="ov-desc" id="ovDesc"></div>
+      <ul class="ov-list" id="ovList"></ul>
+      <div class="ov-hint" id="ovHint"></div>
+    </div>
+  </div>
+
+  <script src="../JS/sudoku.js"></script>
+</body>
+</html>

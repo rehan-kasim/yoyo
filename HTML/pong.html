@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pong</title>
+  <link rel="stylesheet" href="../CSS/pong.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">PING PONG</div>
+      <div class="top-status" id="topStatus">choose a mode</div>
+      <div class="top-actions">
+        <button class="btn" id="btnMenu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="court" id="court">
+        <canvas id="canvas" width="800" height="480"></canvas>
+        <div class="scan"></div>
+        <div class="overlay" id="overlay">
+          <div class="ov-title" id="ovTitle">PING PONG</div>
+          <div class="ov-desc" id="ovDesc"></div>
+          <div class="ov-code hidden" id="ovCode"></div>
+          <ul class="ov-list" id="ovList"></ul>
+          <div class="ov-hint" id="ovHint"></div>
+        </div>
+      </div>
+
+      <div class="hints">
+        <span id="hintLeft">W / S &mdash; left paddle</span>
+        <span class="dot">&middot;</span>
+        <span id="hintRight">&uarr; / &darr; &mdash; right paddle</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>Esc</kbd> menu</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="../JS/pong.js"></script>
+</body>
+</html>

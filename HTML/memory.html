@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory</title>
+  <link rel="stylesheet" href="../CSS/memory.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">MEMORY</div>
+      <div class="top-status" id="topStatus">flip and match</div>
+      <div class="top-actions">
+        <button class="btn" id="btnMenu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="scorebar">
+        <div class="chip">moves <b id="movesEl">0</b></div>
+        <div class="mid">
+          <div class="turn" id="diffLine">normal</div>
+          <div class="sub" id="subLine">0 of 12 pairs</div>
+        </div>
+        <div class="chip">time <b id="timeEl">00:00</b></div>
+      </div>
+
+      <div class="field-wrap">
+        <div class="board" id="board"></div>
+      </div>
+
+      <div class="hints">
+        <span><kbd>&larr;&uarr;&rarr;&darr;</kbd> / <kbd>wasd</kbd> move</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>enter</kbd> flip</span>
+        <span class="dot">&middot;</span>
+        <span>click cards</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>esc</kbd> menu</span>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="ov-card">
+      <div class="ov-title" id="ovTitle"></div>
+      <div class="ov-desc" id="ovDesc"></div>
+      <ul class="ov-list" id="ovList"></ul>
+      <div class="ov-hint" id="ovHint"></div>
+    </div>
+  </div>
+
+  <script src="../JS/memory.js"></script>
+</body>
+</html>

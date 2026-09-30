@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="stylesheet" href="../CSS/snake.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">SNAKE</div>
+      <div class="top-status" id="topStatus">classic · walls kill</div>
+      <div class="top-actions">
+        <button class="btn" id="btnMenu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="scorebar">
+        <div class="chip">score <b id="scoreEl">0</b></div>
+        <div class="mid">
+          <div class="turn" id="turnLine">ready</div>
+          <div class="sub" id="subLine">speed normal</div>
+        </div>
+        <div class="chip">best <b id="bestEl">0</b></div>
+      </div>
+
+      <div class="field-wrap">
+        <div class="field" id="field">
+          <canvas id="canvas" width="480" height="360"></canvas>
+          <div class="overlay hidden" id="overlay">
+            <div class="ov-title" id="ovTitle"></div>
+            <div class="ov-desc" id="ovDesc"></div>
+            <ul class="ov-list" id="ovList"></ul>
+            <div class="ov-hint" id="ovHint"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hints">
+        <span><kbd>&uarr;&darr;&larr;&rarr;</kbd> / <kbd>wasd</kbd> steer</span>
+        <span class="dot">&middot;</span>
+        <span>mouse steers too</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>esc</kbd> menu</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="../JS/snake.js"></script>
+</body>
+</html>

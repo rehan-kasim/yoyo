@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="../CSS/tictactoe.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">TIC TAC TOE</div>
+      <div class="top-status" id="topStatus">choose a mode</div>
+      <div class="top-actions">
+        <button class="btn" id="btnMenu" type="button">Menu</button>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="scorebar">
+        <div class="score x-side">
+          <span class="who">X</span>
+          <b id="xScore">0</b>
+        </div>
+        <div class="mid">
+          <div class="turn" id="turnLine">X to move</div>
+          <div class="sub" id="subLine">first to 3 rounds</div>
+        </div>
+        <div class="score o-side">
+          <span class="who">O</span>
+          <b id="oScore">0</b>
+        </div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board">
+          <div class="cell" data-i="0"></div>
+          <div class="cell" data-i="1"></div>
+          <div class="cell" data-i="2"></div>
+          <div class="cell" data-i="3"></div>
+          <div class="cell" data-i="4"></div>
+          <div class="cell" data-i="5"></div>
+          <div class="cell" data-i="6"></div>
+          <div class="cell" data-i="7"></div>
+          <div class="cell" data-i="8"></div>
+          <div class="line" id="line"></div>
+        </div>
+      </div>
+
+      <div class="hints">
+        <span><kbd>&uarr;&darr;&larr;&rarr;</kbd> move</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>enter</kbd> place</span>
+        <span class="dot">&middot;</span>
+        <span><kbd>esc</kbd> menu</span>
+      </div>
+    </main>
+  </div>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="ov-title" id="ovTitle"></div>
+    <div class="ov-desc" id="ovDesc"></div>
+    <div class="ov-code hidden" id="ovCode"></div>
+    <ul class="ov-list" id="ovList"></ul>
+    <div class="ov-hint" id="ovHint"></div>
+  </div>
+
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script src="../JS/tictactoe.js"></script>
+</body>
+</html>

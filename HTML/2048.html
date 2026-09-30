@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048</title>
+  <link rel="stylesheet" href="../CSS/2048.css">
+</head>
+<body>
+  <div class="game">
+    <header class="header">
+      <div class="head-left">
+        <h1 class="logo">2048</h1>
+        <p class="tagline">Join the tiles, get to <strong>2048!</strong></p>
+      </div>
+      <div class="scores">
+        <div class="score-box">
+          <span class="score-label">Score</span>
+          <span class="score-value" id="score">0</span>
+          <span class="score-add" id="scoreAdd"></span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">Best</span>
+          <span class="score-value" id="best">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <p class="hint">Move with the <b>arrow keys</b> or <b>WASD</b>, or drag on the board.</p>
+      <button class="btn" id="newGame" type="button">New Game</button>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board" id="board">
+        <div class="grid" id="grid"></div>
+        <div class="tiles" id="tiles"></div>
+      </div>
+      <div class="game-over hidden" id="overlay">
+        <p class="overlay-text" id="overlayText">Game over!</p>
+        <ul class="overlay-list" id="overlayList"></ul>
+      </div>
+    </div>
+
+    <p class="footer"><b>Enter</b> chooses &nbsp;·&nbsp; <b>Esc</b> menu &nbsp;·&nbsp; Tab is disabled here</p>
+  </div>
+
+  <script src="../JS/2048.js"></script>
+</body>
+</html>
